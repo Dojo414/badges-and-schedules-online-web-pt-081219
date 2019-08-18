@@ -24,11 +24,11 @@ end
 def printer(attendees)
   badges = batch_badge_creator(attendees)
   rooms = room_assignments(attendees)
-  i = 0
-  while i < rooms.length
-    puts badges[i]
-    puts rooms[i]
-    i += 1
+  badges.each do |badge|
+    puts badges
+  end
+  rooms.each do |room|
+    puts room
   end
 end
   
